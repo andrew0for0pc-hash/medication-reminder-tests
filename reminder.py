@@ -18,5 +18,5 @@ def create_reminder(name, scheduled_at, now):
         raise ValueError('Date must include timezone')
     if when <= now:
         raise ValueError('Date must be in the future')
-    return {'medicine': name.strip(), 'scheduled_at': when.isoformat(),
+    return {'medicine': name, 'scheduled_at': when.isoformat(),
             'status': 'planned'}
